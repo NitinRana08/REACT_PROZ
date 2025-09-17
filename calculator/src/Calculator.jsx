@@ -20,27 +20,27 @@ const Calculator = () => {
     const clear = () => {
         setData("")
     }
- 
+
     return (
         <>
             <h2>hola ji its nitis's Calculator.</h2>
 
             <div className="container">
                 <div>
-                    <input type="text" value={data} placeholder="0 " />
+                    <input type="text" value={data} placeholder="0" readOnly />
                 </div>
                 <br />
 
-                <button onClick={getValue} value={"("}>(</button>
-                <button onClick={getValue} value={")"}>)</button>
-                <button onClick={getValue} value={"%"}>%</button>
+                <button onClick={back} value={"⌫"}>⌫</button>
                 <button onClick={clear} >AC</button>
+                <button onClick={getValue} value={"%"}>%</button>
+                <button onClick={getValue} >÷</button>
 
 
                 <button onClick={getValue} value={"7"}>7</button>
                 <button onClick={getValue} value={"8"}>8</button>
                 <button onClick={getValue} value={"9"}>9</button>
-                <button onClick={getValue} value={"*"}>*</button>
+                <button onClick={getValue} value={"*"}>×</button>
 
                 <button onClick={getValue} value={"4"}>4</button>
                 <button onClick={getValue} value={"5"}>5</button>
@@ -52,7 +52,7 @@ const Calculator = () => {
                 <button onClick={getValue} value={"3"}>3</button>
                 <button onClick={getValue} value={"+"}>+</button>
 
-                <button onClick={getValue} value={"0"}>0</button>
+                <button onClick={getValue} value={""}></button>
                 <button onClick={back} >Back</button>
                 <button onClick={calculation} >=</button>
                 <button onClick={getValue} value={"/"}>/</button>
