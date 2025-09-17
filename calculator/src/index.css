@@ -1,6 +1,6 @@
 .container{
   width: 420px;
-  background-color: rgb(168, 204, 212); 
+  background-color:  #000000 ;
   margin: auto;
   text-align: center;
   padding: 11px;
@@ -15,17 +15,23 @@
   margin-top: 11px;
   margin-top: 11px;
   border-radius: 3px;
+  background-color: #1c1c1c; 
+  color: white;
+  text-align: right;
 
 }
 .container button{
+  
   width: 90px;
   padding: 7px;
   margin: 5px;
   border: none;
   font-size: 20px;
-  background-color: #ffffff;
+  background-color: #333333;
   border-radius: 4px;
+  color:  #ffffff;
   cursor: pointer;
+  border-radius: 50%;
 }
 .container .equal{
   background-color: rgb(0, 162, 255);
