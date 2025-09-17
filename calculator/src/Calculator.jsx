@@ -6,9 +6,9 @@ const Calculator = () => {
 
     const getValue = (e) => {
 
-        if (data === "0"){
+        if (data === "0") {
             setData(e.target.value) // replace of 0
-        }else {
+        } else {
             setData(data.concat(e.target.value))
         }
 
@@ -36,32 +36,38 @@ const Calculator = () => {
                     <input type="text" value={data} placeholder="0" readOnly />
                 </div>
                 <br />
+                <div className="btns">
 
                 <button onClick={back} value={"⌫"}>⌫</button>
                 <button onClick={clear} >AC</button>
                 <button onClick={getValue} value={"%"}>%</button>
                 <button onClick={getValue} >÷</button>
+                <br />
 
 
                 <button onClick={getValue} value={"7"}>7</button>
                 <button onClick={getValue} value={"8"}>8</button>
                 <button onClick={getValue} value={"9"}>9</button>
                 <button onClick={getValue} value={"*"}>×</button>
+                <br />
 
                 <button onClick={getValue} value={"4"}>4</button>
                 <button onClick={getValue} value={"5"}>5</button>
                 <button onClick={getValue} value={"6"}>6</button>
                 <button onClick={getValue} value={"-"}>-</button>
+                <br />
 
                 <button onClick={getValue} value={"1"}>1</button>
                 <button onClick={getValue} value={"2"}>2</button>
                 <button onClick={getValue} value={"3"}>3</button>
                 <button onClick={getValue} value={"+"}>+</button>
+                <br />
 
                 <button onClick={getValue} value={""}></button>
                 <button onClick={back} >Back</button>
                 <button onClick={calculation} >=</button>
                 <button onClick={getValue} value={"/"}>/</button>
+                </div>
 
 
 
