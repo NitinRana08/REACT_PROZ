@@ -1,14 +1,20 @@
 import { useState } from "react";
 
 const Calculator = () => {
-    const [data, setData] = useState("")
+    const [data, setData] = useState("0")
 
 
     const getValue = (e) => {
 
+        if (data === "0"){
+            setData(e.target.value) // replace of 0
+        }else {
+            setData(data.concat(e.target.value))
+        }
+
 
         console.log(e.target.value);
-        setData(data.concat(event.target.value))
+        // setData(data.concat(event.target.value))
 
     }
     const calculation = () => {
@@ -18,7 +24,7 @@ const Calculator = () => {
         setData(data.slice(0, -1))
     }
     const clear = () => {
-        setData("")
+        setData("0")
     }
 
     return (
