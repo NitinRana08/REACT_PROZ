@@ -20,13 +20,15 @@ const Calculator = () => {
     //   setData(eval(data).toString())
     const calculation = () => {
 
-        try{
-            const expression =data.replace(/×/g,"*").replace(/÷/g,"/")
+        try {
+            const expression = data
+                .replace(/×/g, "*")
+                .replace(/÷/g, "/");
             setData(eval(expression).toString())
-        }catch{
+        } catch {
             setData("ErroR")
         }
-      
+
     }
 
 
@@ -39,7 +41,7 @@ const Calculator = () => {
 
     return (
         <>
-            <h2>hola ji its nitis's Calculator.</h2>
+
 
             <div className="container">
                 <div>
@@ -48,35 +50,35 @@ const Calculator = () => {
                 <br />
                 <div className="btns">
 
-                <button onClick={back} value={"⌫"}>⌫</button>
-                <button value="AC" onClick={clear}>AC</button>
-                <button onClick={getValue} value={"%"}>%</button>
-                <button onClick={getValue} value={"/"} >÷</button>
-        
+                    <button onClick={back} value={"⌫"}>⌫</button>
+                    <button value="AC" onClick={clear}>AC</button>
+                    <button onClick={getValue} value={"%"}>%</button>
+                    <button onClick={getValue} value={"÷"} >÷</button>
 
 
-                <button onClick={getValue} value={"7"}>7</button>
-                <button onClick={getValue} value={"8"}>8</button>
-                <button onClick={getValue} value={"9"}>9</button>
-                <button onClick={getValue} value={"×"}>×</button>
-  
 
-                <button onClick={getValue} value={"4"}>4</button>
-                <button onClick={getValue} value={"5"}>5</button>
-                <button onClick={getValue} value={"6"}>6</button>
-                <button onClick={getValue} value={"-"}>-</button>
-  
-
-                <button onClick={getValue} value={"1"}>1</button>
-                <button onClick={getValue} value={"2"}>2</button>
-                <button onClick={getValue} value={"3"}>3</button>
-                <button onClick={getValue} value={"+"}>+</button>
+                    <button onClick={getValue} value={"7"}>7</button>
+                    <button onClick={getValue} value={"8"}>8</button>
+                    <button onClick={getValue} value={"9"}>9</button>
+                    <button onClick={getValue} value={"×"}>×</button>
 
 
-                <button onClick={getValue} value={"%"}>na</button>
-                <button onClick={getValue} value={"0"}  >0</button>
-                <button onClick={getValue} value={"."}>.</button>
-                 <button onClick={calculation} value={"="} >=</button>
+                    <button onClick={getValue} value={"4"}>4</button>
+                    <button onClick={getValue} value={"5"}>5</button>
+                    <button onClick={getValue} value={"6"}>6</button>
+                    <button onClick={getValue} value={"-"}>-</button>
+
+
+                    <button onClick={getValue} value={"1"}>1</button>
+                    <button onClick={getValue} value={"2"}>2</button>
+                    <button onClick={getValue} value={"3"}>3</button>
+                    <button onClick={getValue} value={"+"}>+</button>
+
+
+                    <button onClick={getValue} value={"00"}>00</button>
+                    <button onClick={getValue} value={"0"}  >0</button>
+                    <button onClick={getValue} value={"."}>.</button>
+                    <button onClick={calculation} value={"="} >=</button>
                 </div>
 
 
