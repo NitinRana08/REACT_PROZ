@@ -17,9 +17,19 @@ const Calculator = () => {
         // setData(data.concat(event.target.value))
 
     }
+    //   setData(eval(data).toString())
     const calculation = () => {
-        setData(eval(data).toString())
+
+        try{
+            const expression =data.replace(/×/g,"*").replace(/÷/g,"/")
+            setData(eval(expression).toString())
+        }catch{
+            setData("ErroR")
+        }
+      
     }
+
+
     const back = () => {
         setData(data.slice(0, -1))
     }
