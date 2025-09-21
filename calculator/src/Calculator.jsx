@@ -44,7 +44,7 @@ const Calculator = () => {
 
 
             <div className="container">
-                <div>
+                <div className="display">
                     <input type="text" value={data} placeholder="0" readOnly />
                 </div>
                 <br />
