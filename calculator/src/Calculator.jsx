@@ -13,7 +13,7 @@ const Calculator = () => {
         }
 
 
-        console.log(e.target.value);
+        // console.log(e.target.value);
         // setData(data.concat(event.target.value))
 
     }
@@ -45,7 +45,7 @@ const Calculator = () => {
 
             <div className="container">
                 <div className="display">
-                    <input type="text" value={data} placeholder="0" readOnly />
+                    <input type="text" value={data}  readOnly />
                 </div>
                 <br />
                 <div className="btns">
