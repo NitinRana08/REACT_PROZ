@@ -40,13 +40,16 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   margin-top: 20px;
+  text-align: center;
+  justify-content: center;
+
 }
 
 button {
   height: 70px;
   border-radius: 50%;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 500;
   color: white;
   cursor: pointer;
@@ -73,6 +76,7 @@ button[value="00"]
  {
   background-color: #505050;
   color: white;
+
 }
 
 
@@ -93,48 +97,64 @@ button[value="="],
 button[value="÷"] {
   background-color: #ff9f0a;
   color: white;
-font-weight: 99;
-font-size: 2.5rem;    /* normal thickness */
+  font-weight: 450;
+  font-size: 2.5rem;    /* normal thickness */
 }
 
-/* make 0 button larger (span 2 columns) */
-.zero {
-  grid-column: span 2;
-  border-radius: 35px;
-  text-align: center;
-  background-color: #505050;
-  color: white;
-  font-size: 1.5rem;
+/* phone */
+@media screen and (max-width: 768px) {
+  html, body {
+    overflow: hidden;      
+    overscroll-behavior: none;
+    position: fixed;       
+    width: 100%;
+    height: 100%;
+  }
 }
-@media screen and (max-width: 780px) {
-  .container {
-    width: 100%;       /* take full width */
-    max-width: none;   /* remove limit */
-    height: 100vh;     /* fill phone height */
-    border-radius: 0;  /* remove rounded edges */
-    padding: 20px;
+
+/* table */
+@media screen and (min-width:600px) and (max-width: 848px) and (orientation: portrait) {
+  html, body {
+    overflow: hidden; 
+    width: 100%;
+    height: 100%;
+  }
+  .container{
+   width: 95vw;          /* nearly full screen */
+    padding: 30px;
+  }
+  .container input{
+    height: 20vh;
+    font-size: 5vw;
+  
+  }
+ .btns button {
+    width: 100%;             
+    height: 10vh;            
+    border-radius: 50px;     
+    font-size: 4vw;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end; /* push buttons down like iOS */
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0 4px #333;   */
   }
 
-  .container input {
-    font-size: 3rem;   /* bigger numbers */
-    height: 100px;
+
+.button:active {
+  box-shadow: 0 2px #333;
+  transform: translateY(2px); /* button press effect */
+}
+
+
+  button[value="×"],
+    button[value="-"],
+      button[value="+"],
+        button[value="="],
+          button[value="÷"]
+  {
+    font-size: 3rem;
   }
 
-  .btns {
-    gap: 12px;
-  }
-
-  button {
-    height: 80px;
-    font-size: 1.8rem;
-  }
-
-  .zero {
-    border-radius: 40px;
-    font-size: 1.8rem;
-  }
+  
 }
 
