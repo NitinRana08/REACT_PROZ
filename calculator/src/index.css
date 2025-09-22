@@ -155,6 +155,48 @@ button[value="÷"] {
     font-size: 3rem;
   }
 
+  button[value="⌫"]{
+
+  }
   
 }
 
+
+/* Apple Watch screens (very small viewports) */
+@media screen and (max-width: 420px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+       overflow-y: auto;   /* allow vertical scroll */
+    overflow-x: hidden; 
+    background: #000;  /* dark background */
+  }
+
+  .container {
+    width: 95vw;
+    height: 95vh;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .container input {
+    font-size: 1.5rem;
+    height: 50px;
+  }
+
+  .btns {
+    gap: 5px;
+  }
+
+  .btns button {
+    width: 100%;
+    height: 40px;
+    font-size: 1rem;
+    border-radius: 10px;
+  }
+}
