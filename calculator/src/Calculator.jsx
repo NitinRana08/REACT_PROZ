@@ -80,6 +80,7 @@ const Calculator = () => {
                     <button className="button" onClick={getValue} value={"."}>.</button>
                     <button className="button" onClick={calculation} value={"="} >=</button>
                 </div>
+                <div>n</div>
 
 
 
